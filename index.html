@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com' rel='stylesheet' type='text/css'>
+    <style>
+    /* 1. Added white background to the container */
+    .scroll-container {
+        width: 100%;
+
+        /* ADJUST HEIGHT HERE */
+        height: 200px;         /* Change this value to make the bar taller or shorter */
+        line-height: 150px;    /* Match this to height to keep text centered */
+
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #FFFFFF; /* White background */
+        border-top: 2px solid #EEEEEE; /* Optional: light top border */
+        border-bottom: 2px solid #EEEEEE; /* Optional: light bottom border */
+        padding: 10px 0;
+    }
+
+    #blink {
+        display: inline-block;
+        font-size: 100px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        color: #FF0000;
+        margin: 5px;
+        padding-left: 100%; 
+        animation: scroll-left 15s linear infinite;
+    }
+
+    #blink img {
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+    </style>
+</head>
+<body style="background-color: #f4f4f4;"> <!-- Optional: slightly grey body to see the white box better -->
+
+<div class="scroll-container">
+    <p id="blink">
+        <img src="https://s3.us-east-2.amazonaws.com/tema.gis/images/TEMA_blue.png" width="280" height="80" alt="activation" /> 
+        Welcome to the State Emergency Operations Center
+    </p>
+</div>
+
+</body>
+</html>
